@@ -82,7 +82,7 @@ const Table: React.FC = () => {
     return 0;
   };
 
-  if (listQuery.fetching) return <div>Loading...</div>;
+  if (listQuery.fetching || !tableData) return <div>Loading...</div>;
   if (listQuery.error)
     return <div>There was an error, please try again later</div>;
 
@@ -92,9 +92,13 @@ const Table: React.FC = () => {
         <TableHead {...{ columnHeader, handleSorting }} />
         <TableBody displayed={count} tableData={tableData} />
       </table>
-      <Button onClick={() => setCount(count + 5)}>
-        {translation("buttons.more", { lng: language }).toUpperCase()}
-      </Button>
+      {count < tableData.length ? (
+        <Button onClick={() => setCount(count + 5)}>
+          {translation("buttons.more", { lng: language }).toUpperCase()}
+        </Button>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
