@@ -4,11 +4,12 @@ import {
 } from "../../generated/graphql";
 
 import "./Details.css";
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Tag from "../Tag";
 import { useTranslation } from "react-i18next";
 import { language } from "../../App";
+import {} from "react-router-dom";
 
 interface Props {
   id: string;
@@ -17,6 +18,7 @@ interface Props {
 const Detail = () => {
   const { id } = useParams();
   const [translation] = useTranslation();
+  const navigate = useNavigate();
   const variables = {
     id: id as unknown as string,
   };
@@ -27,13 +29,13 @@ const Detail = () => {
       <div className="details">
         <div className="back-button">
           <h6 className="back-h1">
-            <Link to="/" className="back">
+            <button onClick={() => navigate(-1)} className="btn back">
               <img
                 className="back-icon"
                 src={require("../../pictures/back.png")}
               ></img>
               {translation("buttons.back", { lng: language }).toUpperCase()}
-            </Link>
+            </button>
           </h6>
         </div>
 
