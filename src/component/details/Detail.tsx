@@ -28,8 +28,8 @@ const Detail = () => {
     <>
       <div className="details">
         <div className="back-button">
-          <h6 className="back-h1">
-            <button onClick={() => navigate(-1)} className="btn back">
+          <h6>
+            <button onClick={() => navigate(-1)} className="btn default back">
               <img
                 className="back-icon"
                 src={require("../../pictures/back.png")}
