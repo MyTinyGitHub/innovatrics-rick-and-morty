@@ -1,0 +1,18 @@
+.coverImage {
+  width: 32px;
+  height: 32px;
+}
+
+.tableBody :hover {
+  background-color: rgb(19, 18, 18);
+}
+
+.tableRow td {
+  text-align: left;
+  color: rgb(211, 209, 209);
+  padding: 15px;
+}
+
+.tableRow {
+  border-color: rgb(107, 107, 107);
+}

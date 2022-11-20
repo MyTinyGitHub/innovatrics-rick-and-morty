@@ -1,0 +1,48 @@
+.status-image-Alive,
+.status-image-Dead,
+.status-image-unknown {
+  width: 10px;
+  height: 10px;
+  padding-right: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.status {
+  display: flex;
+  margin-left: 5px;
+  width: min-content;
+}
+
+.badge-parent {
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.status-image-Alive {
+  background-image: url("../pictures/alive.png");
+}
+
+.status-image-unknown {
+  background-image: url("../pictures/unknown.png");
+}
+.status-image-Dead {
+  background-image: url("../pictures/dead.png");
+}
+
+.alive {
+  color: black;
+  background-color: greenyellow;
+}
+
+.dead {
+  color: black;
+  background-color: red;
+}
+
+.unknown {
+  color: azure;
+  background-color: gray;
+}

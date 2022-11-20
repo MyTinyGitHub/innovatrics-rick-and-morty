@@ -1,0 +1,16 @@
+query FetchRickAndMortyCharactersList {
+  characters {
+    results {
+      image
+      name
+      id
+      status
+      gender
+      species
+      created
+      origin {
+        name
+      }
+    }
+  }
+}

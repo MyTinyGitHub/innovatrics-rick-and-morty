@@ -1,0 +1,12 @@
+.table-head tr {
+  text-align: left;
+  color: rgb(211, 209, 209);
+}
+
+.sort-image {
+  padding: 20px;
+}
+
+.table-head {
+  border-color: rgb(107, 107, 107);
+}

@@ -1,0 +1,20 @@
+query FetchRickAndMortyCharacter($id: ID!) {
+  character(id: $id) {
+    name
+    status
+    gender
+    species
+    image
+    origin {
+      name
+    }
+
+    location {
+      name
+    }
+
+    episode {
+      name
+    }
+  }
+}
